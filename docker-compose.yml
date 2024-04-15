@@ -1,0 +1,25 @@
+version: '1'
+services:
+  monolith:
+    build: ./monolith
+    ports: 
+      - "8000:3004"
+    environment:
+      - NODE_ENV=development
+      - DB_HOST=host.docker.internal
+      - DB_USER=root
+      - DB_PASS=92031151617Soul7831
+      - DB_NAME=mystore
+      - JWT_SECRET=privatekey
+  microservicio:
+    build: ./microservicio
+    ports: 
+      - "8001:3004"
+    environment:
+      - NODE_ENV=development
+      - DB_HOST=host.docker.internal
+      - DB_USER=root
+      - DB_PASS=92031151617Soul7831
+      - DB_NAME=licensingtable3
+  
+ 

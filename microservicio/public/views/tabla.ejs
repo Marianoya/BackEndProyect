@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla dinámica con MySQL y EJS</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tabla de licencias</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>SO number</th>
+                <th>PO number</th>
+                <th>Customer Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% orderdetails.forEach(orderdetail => { %>
+                <tr>
+                    <td><%= orderdetail.id %></td>
+                    <td><%= orderdetail.SOnumber %></td>
+                    <td><%= orderdetail.POnumber %></td>
+                    <td><%= orderdetail.CustomerName %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

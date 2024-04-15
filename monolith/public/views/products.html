@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Data Base</title>
+</head>
+<body>
+
+    <h1>Welcome to my Data Base</h1>
+    <h2> Find your License</h2>
+    <label for="IdMongoose">ID: </label>
+    <input type="text" required id="IdMongoose"/>
+    <label>CustomerLocation: </label>
+    <input type="text" required id="OrderNumberMongoose"/>
+    <label>Revenue: </label>
+    <input type="text" required id="PoNumberMongoose"/>
+    <label>Businsess Time: </label>
+    <input type="text" required id="QuantityMongoose"/>
+    <label>Sales rep: </label>
+    <input type="text" required id="CustomerNameMongoose"/>
+    <br>
+    <br>
+    <form id="CreateLicenseDetails">
+        <label for="SOnumberTableCreate">SO Number </label>
+        <input type="text" id="SOnumberTableCreate" name="SOnumberTableCreate" required>
+        <label for="POnumberTableCreate">PO Number </label>
+        <input type="text" id="POnumberTableCreate" name="POnumberTableCreate" required>
+        <label for="CustomerNameTableCreate" >Customer Name </label>
+        <input type="text" id="CustomerNameTableCreate" name="CustomerNameTableCreate" required>
+        <button type="submit">Submit New Order Line</button>
+        </form>
+    <br>
+    <br>
+    <form id="UpdateButton">
+    <label for="CustomerNumberTableUpdate">Licensing ID: </label>
+    <input type="text" id="CustomerNumberTableUpdate" name="CustomerNumberTableUpdate" required>
+    <label for="CustomerNameTableUpdate">Customer Name: </label>
+    <input type="text" required id="CustomerNameTableUpdate" name="CustomerNameTableUpdate" required>
+    <button type="submit" id="UpdateButton2">Submit Change</button>
+    </form>
+    <br>
+    <br>
+    <form>
+        <label for="CustomerNumberTableDelete">Licensing ID </label>
+        <input type="text" id="CustomerNumberTableDelete" name="CustomerNumberTableDelete" required">
+        <button id="DeleteButton">Delete Line</button>
+        </form>
+    <br>
+    <br>
+    <form id="FindLicense">
+        <label for="CustomerNameTableFind">Find by Customer Name: </label>
+        <input type="text" required id="CustomerNameTableFind" name="CustomerNameTableFind" required>
+        <button type="submit">Find Order</button>
+        </form>
+
+    <script src="products.js"></script>
+    <script src="CreateLicense.js"></script>
+    <script src="updateOrderDetail.js"></script>
+
+
+</body>
+</html>
